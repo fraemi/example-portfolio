@@ -1,0 +1,45 @@
+.services-grid {
+    gap: 2rem;
+}
+
+.section-text {
+    margin-bottom: 4rem;
+}
+
+.underline {
+    width: 3rem;
+    height: 0.12rem;
+}
+
+.service-card {
+    padding: 2.5rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: var(--clr-white);
+    border-radius: var(--radius);
+    transition: var(--transition);
+}
+
+.service-card h4 {
+    font-weight: bold;
+}
+
+.service-icon {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.service-card:hover {
+    background: var(--clr-primary-5);
+    color: var(--clr-white);
+}
+
+.service-card:hover .underline {
+    background: var(--clr-white);
+}
+
+.service-card:hover p {
+    color: var(--clr-white)
+}

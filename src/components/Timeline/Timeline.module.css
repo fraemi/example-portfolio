@@ -1,0 +1,64 @@
+.timeline {
+    width: 80vw;
+    max-width: 40rem;
+    margin: 0 auto;
+}
+
+.step {
+    margin: 0;
+    padding: 4rem 2rem;
+    position: relative;
+    border: .125rem dashed var(--clr-primary-5);
+    border-top: 0;
+}
+
+.step:nth-of-type(odd) {
+    margin-left: 2rem;
+    padding-left: 0;
+    border-left: 0;
+    border-top-right-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+}
+
+.step:nth-of-type(even) {
+    margin-right: 2rem;
+    padding-right: 0;
+    border-right: 0;
+    border-top-left-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+}
+
+.step:first-child {
+    border-left: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 2rem;
+}
+
+.step:last-child {
+    border-bottom: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 2rem;
+}
+
+
+.step-number {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 2rem;
+    height: 2rem;
+    display: grid;
+    place-items: center;
+    background: var(--clr-primary-5);
+    border-radius: 50%;
+    font-weight: bold;
+    color: var(--clr-primary-1);
+}
+
+.step:nth-of-type(odd) .step-number {
+    right: -1.875rem;
+}
+
+.step:nth-of-type(even) .step-number {
+    left: 0;
+}

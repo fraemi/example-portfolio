@@ -1,0 +1,100 @@
+.projects-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    grid-template-areas:
+        'project-1'
+        'project-2'
+        'project-3'
+        'project-4';
+}
+
+.project-p {
+    width: 85vw;
+    max-width: 30rem;
+    margin: 0 auto;
+    color: var(--clr-grey-5);
+    text-align: center;
+}
+
+.card {
+    height: 15rem;
+    position: relative;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.card img {
+    height: 100%;
+    object-fit: cover;
+    border-radius: var(--radius);
+}
+
+.card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: rgb(233 185 73 / 80%);
+    border-radius: var(--radius);
+    transition: var(--transition);
+    opacity: 0;
+}
+
+.card-overlay::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0.25rem solid var(--clr-white);
+    border-radius: var(--radius);
+    transition: var(--transition);
+    opacity: 0;
+}
+
+.card-overlay h4, .card-overlay p {
+    color: var(--clr-white);
+}
+
+.card:hover .card-overlay {
+    opacity: 1;
+}
+
+.card:hover .card-overlay::after {
+    transform: scale(0.8);
+    opacity: 1;
+}
+
+/* ----------- MEDIA QUERIES ----------- */
+@media screen and (min-width: 576px) {
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 15rem);
+        grid-template-areas:
+            'project-1 project-2'
+            'project-3 project-4'
+    }
+
+    .card {
+        height: auto;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .projects-grid {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 12.5rem);
+        gap: 1rem;
+        grid-template-areas:
+            'project-1 project-2 project-2'
+            'project-1 project-3 project-4';
+    }
+}

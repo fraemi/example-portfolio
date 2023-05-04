@@ -1,0 +1,31 @@
+.intro {
+    height: calc(100vh - 4.875rem);
+}
+
+.underline {
+    margin-bottom: 0.5rem;
+    margin-left: 0;
+}
+
+.btn {
+    margin-top: 1.25rem;
+}
+
+.socials {
+    margin: 3rem;
+    margin-left: 0;
+    display: flex;
+    gap: 2.5rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    transition: var(--transition);
+}
+
+.socials a {
+    color: var(--clr-grey-1);
+    transition: var(--transition);
+}
+
+.socials a:hover {
+    color: var(--clr-primary-5);
+}
