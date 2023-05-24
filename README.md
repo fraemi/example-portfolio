@@ -10,4 +10,5 @@ Odwzorowany interfejs użytkownika i elementy wizualne strony Portfolio przy uż
 - Zaznajomienie się z możliwościami Reacta, w tym tworzenie komponentów wielokrotnego użytku i useEffect hook
 - Walidacja formularzy przy użyciu biblioteki Formik.
 - Korzystanie z modułów CSS.
+- Użycie Flexboxa i Grida do tworzenia układu strony.
 - Wdrażanie projektu napisanego przy użyciu React JS na Github Pages.
